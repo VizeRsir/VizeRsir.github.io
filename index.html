@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио Фомир | Арты на заказ</title>
+    <title>Портфолио | Арты на заказ от Фомира</title>
     <style>
         /* Базовые настройки */
         :root {
             --bg-color: #121212;
             --text-color: #e0e0e0;
-            --accent-color: #ff4d4d;
+            --accent-color: #00d2c6; /* Бирюзовый цвет */
             --card-bg: #1e1e1e;
         }
 
@@ -26,23 +26,42 @@
             line-height: 1.6;
         }
 
+        /* Шапка с информацией */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 60px 20px 40px 20px;
             background: linear-gradient(to bottom, #1a1a1a, var(--bg-color));
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
             letter-spacing: 2px;
+            color: #fff;
         }
 
-        header p {
-            font-size: 1.1rem;
-            color: #a0a0a0;
-            max-width: 600px;
+        .info-block {
+            max-width: 700px;
             margin: 0 auto;
+            background-color: rgba(0, 210, 198, 0.05); /* Легкий бирюзовый оттенок фона */
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 210, 198, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .info-block p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 10px;
+        }
+
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-block strong {
+            color: var(--accent-color);
         }
 
         .container {
@@ -69,7 +88,7 @@
 
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 210, 198, 0.2); /* Бирюзовая тень при наведении */
         }
 
         .gallery-item img {
@@ -118,16 +137,17 @@
             margin-top: 20px;
             padding: 15px 40px;
             background-color: var(--accent-color);
-            color: white;
+            color: #121212; /* Темный текст для контраста на бирюзовой кнопке */
             text-decoration: none;
             border-radius: 30px;
             font-size: 1.2rem;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .btn-contact:hover {
-            background-color: #cc0000;
+            background-color: #00b3a8; /* Чуть темнее при наведении */
+            transform: scale(1.05);
         }
 
         footer {
@@ -142,6 +162,7 @@
             header h1 { font-size: 2rem; }
             .order-info { padding: 20px; }
             .price-tag { font-size: 2rem; }
+            .info-block { padding: 15px; }
         }
     </style>
 </head>
@@ -149,7 +170,13 @@
 
     <header>
         <h1>Арты на заказ</h1>
-        <p>Уникальные иллюстрации в авторском стиле. Аватарки, персонажи, обложки и многое другое.</p>
+        
+        <!-- Информационный блок -->
+        <div class="info-block">
+            <p><strong>Привет! Меня зовут Фомир.</strong></p>
+            <p>Я создаю уникальные иллюстрации в авторском стиле. Рисую атмосферные и необычные работы — от аватарок и персонажей до обложек и артов «для души».</p>
+            <p>Сейчас я собираю портфолио, поэтому заказывая арт у меня, вы получаете качественную работу по очень приятной цене.</p>
+        </div>
     </header>
 
     <div class="container">
@@ -195,7 +222,8 @@
             </div>
             <p><em>Специальная цена, так как сейчас собираю портфолио!</em></p>
             
-            <a href="https://t.me/Fomirrr" class="btn-contact" target="_blank">Написать мне</a>
+            <!-- Ссылка на Telegram -->
+            <a href="https://t.me/Fomirrr" class="btn-contact" target="_blank">Написать Фомиру</a>
         </div>
     </div>
 
